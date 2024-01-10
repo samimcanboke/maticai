@@ -1,26 +1,46 @@
-import React from 'react'
+import React from "react";
 
 function About() {
   return (
     <div>
-        <h4 className='text-2xl font-bold mb-12 text-white'>Get to know <span className='text-lime-500 underline'>CryptiVest</span></h4>
-        <p className='text-white font-normal mb-3 justify-items-stretch'>
-            Introduce our new crypto staking dApp, CryptiVest, the perfect platform for earning passive income on your MATIC holdings. The dApp allows users to stake MATIC for a chosen duration and earn a high annual percentage yield (APY) on their investment.
-        </p>
-        <p className='text-white font-normal mb-3 justify-items-stretch'>
-            Users can easily stake their MATIC from various duration options. Upon completion of the staking period, users can close their position to return their staked MATIC along with the earned interest. However, if a user closes their position before the expiration of the selected duration, they will not receive any interest earned on their investment.
-        </p>
-        <p className='text-white font-normal mb-3 justify-items-stretch'>
-            Our dApp uses a secure and reliable smart contract to keep your staked funds safe and accessible. With our user-friendly interface, anyone can start earning passive income on their MATIC holdings.
-        </p>
-        <p className='text-white font-normal mb-3 justify-items-stretch'>
-            Get started today and start earning a high APY on your investment!
-        </p>
-        <p className='text-white font-normal mb-3 justify-items-stretch'>
-            <span className='text-lime-500'><b>Note:</b></span> The APY rate and the duration options that are available may vary depending on the current market conditions, so it is recommended that you check the dApp before making a deposit.
-        </p>
+      <h4 className="text-2xl font-bold mb-12 text-white">
+        <span className="text-lime-500 underline">MaticFundAI</span> hakkında
+        bilgiler
+      </h4>
+      <p className="text-white font-normal mb-3 justify-items-stretch">
+        MATIC varlıklarınızdan pasif gelir elde etmek için mükemmel bir platform
+        olan yeni kripto stake dApp'ımız MaticFundAI'ı tanıtın. DApp,
+        kullanıcıların MATIC'i seçilen bir süre boyunca stake etmelerine ve
+        yatırımlarından yüksek bir yıllık yüzde getiri (APY) kazanmalarına
+        olanak tanır.
+      </p>
+      <p className="text-white font-normal mb-3 justify-items-stretch">
+        Kullanıcılar MATIC'lerini çeşitli süre seçeneklerinden kolayca stake
+        edebilirler. Staking süresinin tamamlanmasının ardından, kullanıcılar
+        stake ettikleri MATIC'i kazanılan faizle birlikte iade etmek için
+        pozisyonlarını kapatabilirler. Ancak, bir kullanıcı seçilen sürenin sona
+        ermesinden önce pozisyonunu kapatırsa, yatırımlarından kazanılan
+        herhangi bir faiz almayacaktır.{" "}
+      </p>
+      <p className="text-white font-normal mb-3 justify-items-stretch">
+        DApp'ımız, yatırılan fonlarınızı güvende ve erişilebilir tutmak için
+        güvenli ve güvenilir bir akıllı sözleşme kullanır. Kullanıcı dostu
+        arayüzümüzle, herkes MATIC varlıklarından pasif gelir elde etmeye
+        başlayabilir.{" "}
+      </p>
+      <p className="text-white font-normal mb-3 justify-items-stretch">
+        Bugün başlayın ve yatırımınızdan yüksek bir APY kazanmaya başlayın!
+      </p>
+      <p className="text-white font-normal mb-3 justify-items-stretch">
+        <span className="text-lime-500">
+          <b>Not:</b>
+        </span>{" "}
+        APY oranı ve mevcut süre seçenekleri mevcut piyasa koşullarına bağlı
+        olarak değişebilir, bu nedenle para yatırmadan önce dApp'ı kontrol
+        etmeniz önerilir.
+      </p>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;
