@@ -2,20 +2,31 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
-import { RiMoonFill } from "react-icons/ri";
-import { useIsMounted } from "../hooks/useIsMounted";
-import { ConnectWallet } from "@thirdweb-dev/react";
-import { useAddress, useDisconnect } from "@thirdweb-dev/react";
+import {
+  ConnectWallet,
+  useAddress,
+  useDisconnect,
+  useBalance,
+} from "@thirdweb-dev/react";
 
 import MobileMenu from "./MobileMenu";
 import ThemeChanger from "./ThemeChanger";
 
-function Nav() {
-  const mounted = useIsMounted();
+function Nav({ setAddress }) {
   const address = useAddress();
+  const { data: getBalance, isLoading } = useBalance();
+  const [balance, setBalance] = useState(0);
+
   const disconnect = useDisconnect();
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    if (!isLoading) {
+      setAddress(address);
+      setBalance(
+        (Math.floor(parseFloat(getBalance.displayValue) * 100) / 100).toFixed(2)
+      );
+    }
+  }, [isLoading]);
 
   return (
     <>
@@ -24,7 +35,7 @@ function Nav() {
         className="w-full z-10 top-0 bg-transparent relative pt-6 pb-12 md:w-10/12 md:mx-auto">
         <div className="flex justify-between items-center">
           <Image
-            src="https://placehold.co/80x80"
+            src={require("../public/matic fund logo white (500 x 500 piksel).png")}
             alt="Picture of the author"
             width={80}
             height={80}
@@ -49,7 +60,10 @@ function Nav() {
 
             {/* Connection Status */}
             {address ? (
-              <button onClick={disconnect}>{address}</button>
+              <button onClick={disconnect}>
+                {balance} Matic | {address.substring(0, 4)}...
+                {address.substring(38, 42)}
+              </button>
             ) : (
               <ConnectWallet theme={"dark"} modalSize={"wide"} />
             )}

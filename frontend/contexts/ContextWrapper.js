@@ -3,12 +3,13 @@ import { useCallback, useState } from "react";
 import AppContext from "./AppContext";
 
 export function ContextWrapper({ children }) {
-  const [testValue] = useState();
+  const [address, setAddress] = useState();
 
   return (
     <AppContext.Provider
       value={{
-        testValue,
+        address,
+        setAddress,
       }}>
       {children}
     </AppContext.Provider>

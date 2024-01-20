@@ -17,8 +17,10 @@ import Footer from "@/components/Footer";
 import { ContextWrapper } from "@/contexts/ContextWrapper";
 
 import { ThemeProvider } from "next-themes";
+import { useState } from "react";
 
 export default function App({ Component, pageProps }) {
+  const [address, setAddress] = useState();
   return (
     <ThirdwebProvider
       activeChain="mumbai"
@@ -32,8 +34,8 @@ export default function App({ Component, pageProps }) {
         <ThemeProvider enableSystem={true} attribute="class">
           <div className="w-full h-auto bg-stake-800 dark:bg-dark-800">
             <div className="w-11/12 mx-auto">
-              <Nav />
-              <Component {...pageProps} />
+              <Nav setAddress={setAddress} />
+              <Component {...pageProps} address={address} />
               <Footer />
               <ToastContainer
                 position="bottom-right"
