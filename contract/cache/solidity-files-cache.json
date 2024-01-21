@@ -1,10 +1,10 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/samimcanboke/Documents/GitHub/maticai/contract/contracts/MaticFund.sol": {
-      "lastModificationDate": 1705457453170,
-      "contentHash": "563c018bcac197fca185bc3d06d5b3bf",
-      "sourceName": "contracts/MaticFund.sol",
+    "/Users/samimcanboke/Documents/GitHub/maticai/contract/contracts/AggregatorV3Interface.sol": {
+      "lastModificationDate": 1705784224658,
+      "contentHash": "3c30f6b5388dc4ac2384e8741ecf6a43",
+      "sourceName": "contracts/AggregatorV3Interface.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
@@ -31,11 +31,84 @@
       },
       "imports": [],
       "versionPragmas": [
+        "^0.8.22"
+      ],
+      "artifacts": [
+        "AggregatorV3Interface"
+      ]
+    },
+    "/Users/samimcanboke/Documents/GitHub/maticai/contract/contracts/MaticFund.sol": {
+      "lastModificationDate": 1705784344915,
+      "contentHash": "1b186588e5dd92cb41473efbda054cf3",
+      "sourceName": "contracts/MaticFund.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./SafeMath.sol",
+        "./AggregatorV3Interface.sol"
+      ],
+      "versionPragmas": [
         "0.8.22"
       ],
       "artifacts": [
-        "AggregatorV3Interface",
-        "MaticFund",
+        "MaticFund"
+      ]
+    },
+    "/Users/samimcanboke/Documents/GitHub/maticai/contract/contracts/SafeMath.sol": {
+      "lastModificationDate": 1705784224645,
+      "contentHash": "8c504262d49d5f74ecbd2b44d7094336",
+      "sourceName": "contracts/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.22"
+      ],
+      "artifacts": [
         "SafeMath"
       ]
     }
